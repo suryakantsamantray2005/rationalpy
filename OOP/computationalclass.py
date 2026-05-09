@@ -3,27 +3,35 @@ class Computational:
     def __init__(self):
         pass
 
-    def Factorial(self,n):
+    def Factorial(self,n):     #function for factorial
         product=1
         for i in range(1,n+1):
             product=product*i
         print('the factorial of',n,'is',product)
 
-    def naturalsum(self,n):
-        sum=(n*(n+1))//2
-        print('the sum of',n,'is',sum)
+    def natural_sum(self,n):   #function for sum of natural numbers
+        total=(n*(n+1))//2
+        print('the sum of',n,'is',total)
 
-    def testprime(self,n):
+    def test_prime(self, n):
+
+     if n<= 1:
+        print("the integer is not prime")
+
+     else:
         flag = True
-        for i in range(2,n):
-            if n%i==0:
-                flag = False
-        if flag == True:
-            print('the integer is prime')
-        else:
-            print('the integer is not prime')
 
-    def testprims(self,n1,n2):
+        for i in range(2, n):
+            if n % i == 0:
+                flag = False
+                break
+
+        if flag == True:
+            print("integer is prime")
+        else:
+            print("integer is not prime")
+
+    def test_prims(self,n1,n2):  #function for checking co-prime
         for i in range(min(n1,n2),0,-1):
             if n1%i==0 and n2%i==0:
                 if i==1:
@@ -32,19 +40,20 @@ class Computational:
                   print('it is not co-prime')
                 break
 
-    def tableMult(self,n):
+    def table_Mult(self,n):      #Multiplication of integer upto 10
+        L=[]
         for i in range(1,11):
-            print(n*i)
-        print()
+            L.append(n*i)
+        return L
 
-    def listDiv(self,n):
+    def list_Div(self,n):
         L=[]
         for i in range(1,n+1):
             if n%i==0:
                 L.append(i)
-        print(L)
+        return L
 
-    def listprimeDiv(self,n):
+    def list_prime_Div(self,n):
         L=[]
         M=[]
         for i in range(1,n+1):
@@ -60,9 +69,9 @@ class Computational:
                  break
              if flag:
                M.append(j)
-        print(M)
+        return M
                     
 
 
 test1 = Computational()
-test1.listprimeDiv(9)
+test1.test_prime(1)
