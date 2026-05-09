@@ -13,7 +13,7 @@ class Computational:
         total=(n*(n+1))//2
         print('the sum of',n,'is',total)
 
-    def test_prime(self, n):
+    def test_prime(self, n):   #function for checking prime integer
 
      if n<= 1:
         print("the integer is not prime")
@@ -46,14 +46,14 @@ class Computational:
             L.append(n*i)
         return L
 
-    def list_Div(self,n):
+    def list_Div(self,n):        #get divisors of a integer
         L=[]
         for i in range(1,n+1):
             if n%i==0:
                 L.append(i)
         return L
 
-    def list_prime_Div(self,n):
+    def list_prime_Div(self,n): #get prime divisors of a integer
         L=[]
         M=[]
         for i in range(1,n+1):
@@ -74,4 +74,4 @@ class Computational:
 
 
 test1 = Computational()
-test1.test_prime(1)
+print(test1.list_Div(12))
