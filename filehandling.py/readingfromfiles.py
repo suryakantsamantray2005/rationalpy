@@ -1,5 +1,0 @@
-#reading of files using read()
-f=open('sample1.txt','r')
-s=f.read()
-print(s)
-f.close()
