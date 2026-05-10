@@ -18,14 +18,14 @@ class BankAccount:
         self.balance=self.balance+amount
         print('Deposited succesfully - ',amount)
 
-    def withdrawl(self,amount1):
+    def withdrawal(self,amount1):
         if self.balance>=amount1:
            self.balance=self.balance-amount1
            print('Withdrawl amount of',amount1, 'successful')
         else:
             print('Insufficient Balance')
 
-    def bankfees(self):
+    def bank_fees(self):
         bank_fees=self.balance*0.05
         self.balance = self.balance - bank_fees
         print('the bank fees is',bank_fees)
